@@ -6,7 +6,7 @@
     <!-- <img src="./assets/logo.png">
     <hello></hello> -->
     <form @submit.prevent="submit">
-      <input v-model.number="name"> 
+      <!-- <input v-model.number="name"> 
       <p v-show="age===''">xxx</p>
       <p v-if="age<=18">AGE NOT 18</p>
       <p v-if="name===''">Please input name</p>
@@ -18,12 +18,12 @@
         <option :value="{v:2}">Femail</option>
       </select>
 
-      <p v-if="gender">{{gender.v}}</p>
+      <p v-if="gender">{{gender.v}}</p> -->
 
 
-      <ul>
+      <!-- <ul>
         <li v-for="n in list" :key="n.id">{{n.name}}</li>
-      </ul>
+      </ul> -->
       <!-- <select v-model="gender">
         <option value="1">Mail</option>
         <option value="2">Femail</option>
@@ -32,12 +32,12 @@
       <!-- <button @click="submit">Submit</button> -->
 
 
-      <p style="background-color:red" v-for="item in computListX" :key="item.id">
+      <!-- <p style="background-color:red" v-for="item in computListX" :key="item.id">
        {{item.name}}
       </p>
-      <button type="submit">Send</button>
+      <button type="submit">Send</button> -->
     </form>
-    <Item @select="xxx" v-for="item in computedList" :key="item.id" :data="item" header="Item Detail"></Item>
+    <!-- <Item @select="xxx" v-for="item in computedList" :key="item.id" :data="item" header="Item Detail"></Item> -->
   </div>
 </template>
 

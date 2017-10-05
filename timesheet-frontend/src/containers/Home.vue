@@ -1,10 +1,18 @@
 <template>
   <div>
-     <h1> HOME </h1>
+     <h1> LOGIN </h1>
      <form @submit.prevent="login">
-         <input type="text" placeholder="Username" v-model="username">
-         <input type="text" placeholder="Password" v-model="password">
+       <b-container fluid>
+         <b-row class="my-1">
+       <b-form-input v-model="username"
+                  type="text"
+                  placeholder="Username"></b-form-input>
+      <b-form-input v-model="password"
+                  type="text"
+                  placeholder="Password"></b-form-input>
          <button type="submit" >CLICK TO LOGIN</button>
+         </b-row>
+         </b-container>
      </form>
      
   </div>
@@ -24,8 +32,9 @@ export default {
   methods: {
     login () {
       Api.login(this.username, this.password)
-       .then(() => {
-         this.$router.push({name: '/'})
+       .then((r) => {
+        //  console.log(r)
+         this.$router.push({name: 'TimeCheck'})
        })
     }
   }
