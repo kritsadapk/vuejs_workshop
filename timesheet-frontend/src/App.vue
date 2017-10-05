@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <router-link :to="{name: 'Home'}">Home</router-link>
-    <router-link :to="{name: 'About', query:{name: 'test'}}">About</router-link>
+    <Navbar />
+    <!-- <router-link tag="button" :to="{name: 'Home'}">Home</router-link>
+    <router-link tag="button" :to="{name: 'About', query:{name: 'test'}}">About</router-link> -->
     <router-view/>
     <!-- <img src="./assets/logo.png">
     <hello></hello> -->
@@ -43,12 +44,14 @@
 
 <script>
 import Item from './components/Item'
+import Navbar from './components/Navbar'
 // import Hello from './components/Hello'
 // Component Hello จะใช้ได้แบบ Local เท่านั้นซึ่งส่วนใหญ่จะใชเแบบนี้
 export default {
   name: 'app',
   components: {
-    Item
+    Item,
+    Navbar
   },
   data () {
     return {
