@@ -19,7 +19,8 @@ const router = new VueRouter({
       component: User,
       children: [
           {path: 'info', name: 'Userinfo', component: UserInfo},
-          {path: 'edit', name: 'UserEdit', component: UserEdit}
+          {path: 'edit', name: 'UserEdit', component: UserEdit},
+          {path: 'edit1', name: 'UserEdit', component: UserEdit}
       ]},
       {path: '*', redirect: '/'}
   ]
